@@ -2,13 +2,17 @@ version: '3.1'
 
 services:
   api:
-    image: api-feign-client-demo
-    container_name: api-feign-client-demo
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: feign-client-demo-api
     ports:
       - 8282:8282
   client:
-    image: client-feign-client-demo
-    container_name: client-feign-client-demo
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: feign-client-demo-client
     depends_on:
       - api
     ports:
