@@ -1,7 +1,7 @@
 version: '3.1'
 
 services:
-  api-feign-client-demo:
+  api:
     build:
       context: ./api
       dockerfile: Dockerfile
@@ -9,15 +9,15 @@ services:
     image: api-feign-client-demo
     ports:
       - 8282:8282
-  client-feign-client-demo:
+  client:
     build:
       context: ./client
       dockerfile: Dockerfile
     container_name: client-feign-client-demo
     image: client-feign-client-demo
     depends_on:
-      - api-feign-client-demo
+      - api
     ports:
       - 8283:8283
     environment:
-      API_URL: api-feign-client-demo:8282
+      API_URL: api:8282
