@@ -10,7 +10,7 @@ RUN mvn package
 
 FROM openjdk:21
 
-EXPOSE 8283
+EXPOSE 8080
 
 COPY --from=build /project/target/*.jar application.jar
 

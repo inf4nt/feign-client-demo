@@ -19,7 +19,7 @@ public class ApiServerTestCall {
 
     @EventListener(ApplicationReadyEvent.class)
     public void listener() {
-        log.info("Calling api server ...");
+        log.info("Calling api server");
         Collection<ApiDTO> all = apiClient.getAll();
         log.info("Api response {}", all);
     }

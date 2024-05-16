@@ -8,7 +8,9 @@ services:
     container_name: api-feign-client-demo
     image: api-feign-client-demo
     ports:
-      - 8282:8282
+      - 18080:8080
+    environment:
+      server.port: 8080
   client:
     build:
       context: ./client
@@ -18,6 +20,7 @@ services:
     depends_on:
       - api
     ports:
-      - 8283:8283
+      - 18081:8080
     environment:
-      API_URL: api:8282
+      API_URL: api:8080
+      server.port: 8080
