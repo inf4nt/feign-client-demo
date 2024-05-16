@@ -15,8 +15,8 @@ public class ApiRestController {
     @GetMapping
     public Collection<ApiDTO> getAll() {
         return List.of(
-                new ApiDTO(UUID.randomUUID().toString(), ApiStatus.RUNNING),
-                new ApiDTO(UUID.randomUUID().toString(), ApiStatus.CLOSED)
+                new ApiDTO(ApiApplication.class.getSimpleName(), UUID.randomUUID().toString(), ApiStatus.RUNNING),
+                new ApiDTO(ApiApplication.class.getSimpleName(), UUID.randomUUID().toString(), ApiStatus.CLOSED)
         );
     }
 }

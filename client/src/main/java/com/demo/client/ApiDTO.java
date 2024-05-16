@@ -12,6 +12,8 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ApiDTO {
 
+    String applicationName;
+
     String id;
 
     ApiStatus status;

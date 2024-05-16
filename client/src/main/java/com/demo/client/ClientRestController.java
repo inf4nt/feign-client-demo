@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/client")
+@RequestMapping
 public class ClientRestController {
 
     @Autowired
