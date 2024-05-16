@@ -6,6 +6,7 @@ services:
       context: ./api
       dockerfile: Dockerfile
     container_name: api-feign-client-demo
+    image: api-feign-client-demo
     ports:
       - 8282:8282
   client-feign-client-demo:
@@ -13,10 +14,10 @@ services:
       context: ./client
       dockerfile: Dockerfile
     container_name: client-feign-client-demo
+    image: client-feign-client-demo
     depends_on:
       - api-feign-client-demo
     ports:
       - 8283:8283
     environment:
       API_URL: api-feign-client-demo:8282
-      API_TEST_CALL_ENABLED: true
