@@ -1,4 +1,4 @@
-package com.demo.client;
+package com.demo.client.api;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

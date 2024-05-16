@@ -1,5 +1,7 @@
 package com.demo.client;
 
+import com.demo.client.api.ApiClient;
+import com.demo.client.api.ApiDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
