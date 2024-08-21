@@ -9,10 +9,15 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping
 public class ApiRestController {
 
     @GetMapping
+    public String index() {
+        return ApiApplication.class.getSimpleName();
+    }
+
+    @GetMapping("/api")
     public Collection<ApiDTO> getAll() {
         return List.of(
                 new ApiDTO(ApiApplication.class.getSimpleName(), UUID.randomUUID().toString(), ApiStatus.RUNNING),
