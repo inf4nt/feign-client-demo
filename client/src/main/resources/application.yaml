@@ -1,3 +1,6 @@
 server:
   port: 18081
-API_URL: localhost:18080
+api:
+  spam:
+    enabled: true
+  url: localhost:18080

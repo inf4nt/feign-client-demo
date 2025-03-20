@@ -8,7 +8,7 @@ import java.util.Collection;
 @FeignClient(
         name = "api-client",
         path = "/api",
-        url = "${API_URL}",
+        url = "${api.url}",
         dismiss404 = true
 )
 public interface ApiClient {
