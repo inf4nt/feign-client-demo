@@ -1,8 +1,8 @@
 services:
   api:
     build:
-      context: ./api
-      dockerfile: Dockerfile
+      context: ../api
+      dockerfile: ../docker/Dockerfile
     container_name: api-feign-client-demo
     image: api-feign-client-demo
     ports:
@@ -16,8 +16,8 @@ services:
       SERVER_PORT: 8080
   client:
     build:
-      context: ./client
-      dockerfile: Dockerfile
+      context: ../client
+      dockerfile: ../docker/Dockerfile
     container_name: client-feign-client-demo
     image: client-feign-client-demo
     depends_on:
